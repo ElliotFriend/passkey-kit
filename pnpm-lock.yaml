@@ -5,7 +5,7 @@ settings:
   excludeLinksFromLockfile: false
 
 overrides:
-  '@stellar/stellar-sdk': 13.0.0-beta.1
+  '@stellar/stellar-sdk': 13.0.0-rc.1
 
 importers:
 
@@ -15,8 +15,8 @@ importers:
         specifier: ^11.0.0
         version: 11.0.0
       '@stellar/stellar-sdk':
-        specifier: 13.0.0-beta.1
-        version: 13.0.0-beta.1
+        specifier: 13.0.0-rc.1
+        version: 13.0.0-rc.1
       base64url:
         specifier: ^3.0.1
         version: 3.0.1
@@ -46,8 +46,8 @@ importers:
   packages/passkey-factory-sdk:
     dependencies:
       '@stellar/stellar-sdk':
-        specifier: 13.0.0-beta.1
-        version: 13.0.0-beta.1
+        specifier: 13.0.0-rc.1
+        version: 13.0.0-rc.1
       buffer:
         specifier: 6.0.3
         version: 6.0.3
@@ -59,8 +59,8 @@ importers:
   packages/passkey-kit-sdk:
     dependencies:
       '@stellar/stellar-sdk':
-        specifier: 13.0.0-beta.1
-        version: 13.0.0-beta.1
+        specifier: 13.0.0-rc.1
+        version: 13.0.0-rc.1
       buffer:
         specifier: 6.0.3
         version: 6.0.3
@@ -72,8 +72,8 @@ importers:
   packages/sac-sdk:
     dependencies:
       '@stellar/stellar-sdk':
-        specifier: 13.0.0-beta.1
-        version: 13.0.0-beta.1
+        specifier: 13.0.0-rc.1
+        version: 13.0.0-rc.1
       buffer:
         specifier: 6.0.3
         version: 6.0.3
@@ -93,11 +93,11 @@ packages:
   '@stellar/js-xdr@3.1.2':
     resolution: {integrity: sha512-VVolPL5goVEIsvuGqDc5uiKxV03lzfWdvYg1KikvwheDmTBO68CKDji3bAZ/kppZrx5iTA8z3Ld5yuytcvhvOQ==}
 
-  '@stellar/stellar-base@13.0.0-beta.1':
-    resolution: {integrity: sha512-S5c2FyKwUOc28/3sDoOfPIcdzcbUyfiYRmcUlscZrEX/VVzV12216XRkdWy2MYa8KQNK60MpR7wrGp2MamvVGg==}
+  '@stellar/stellar-base@13.0.0':
+    resolution: {integrity: sha512-zS/F1P2MfvgoIlUxOM3PMAEm76qoP5N7HYiww6y6EMP+j3brVFTnTIlJuYdnRdVaPXC/Z4BpojG3bVyhs32Tiw==}
 
-  '@stellar/stellar-sdk@13.0.0-beta.1':
-    resolution: {integrity: sha512-yJN2HzibhZFJsdLRU83bkUwb9dq1sZRRiQptTJyunVv0hQsF+tTldrP3hHst3LROv/2GWTn20tmAqnp0hkzOhg==}
+  '@stellar/stellar-sdk@13.0.0-rc.1':
+    resolution: {integrity: sha512-a173pQPCuS8/xVET/euwp8UWEFsE68KGF21Xcq46TluDGIq0fKVmJ6mw1LAS2uEOE757rrY24KNGAux4FXR64g==}
 
   '@types/node@22.7.5':
     resolution: {integrity: sha512-jML7s2NAzMWc//QSJ1a3prpk78cOPchGvXJsC3C6R6PSMoooztvRVQEz89gmBTBY1SPMaqo5teB4uNHPdetShQ==}
@@ -188,8 +188,8 @@ packages:
     resolution: {integrity: sha512-QMEp5B7cftE7APOjk5Y6xgrbWu+WkLVQwk8JNjZ8nKRciZaByEW6MubieAiToS7+dwvrjGhH8jRXz3MVd0AYqQ==}
     hasBin: true
 
-  sodium-native@4.2.1:
-    resolution: {integrity: sha512-48X3PfRLW+f0fgb3J7f7mkZ9eBKcGR/bD5mdXXLAx4RWwKUe3095yPQgiUUQTfh8Q29JzwhSQATitQDBIozN/w==}
+  sodium-native@4.3.0:
+    resolution: {integrity: sha512-OcMgoS0NJx+4yVUlhvL9uZsVZfmyHZ2RpSXkiIoOHMglqvJDeGwn1rUigPrvcNTq3m9hPXtt6syxQbF3vvwmRQ==}
 
   toml@3.0.0:
     resolution: {integrity: sha512-y/mWCZinnvxjTKYhJ+pYxwD0mRLVvOtdS2Awbgxln6iEnt4rk0yBxeSBHkGJcPucRiG0e55mwWp+g/05rsrd6w==}
@@ -223,7 +223,7 @@ snapshots:
 
   '@stellar/js-xdr@3.1.2': {}
 
-  '@stellar/stellar-base@13.0.0-beta.1':
+  '@stellar/stellar-base@13.0.0':
     dependencies:
       '@stellar/js-xdr': 3.1.2
       base32.js: 0.1.0
@@ -232,11 +232,11 @@ snapshots:
       sha.js: 2.4.11
       tweetnacl: 1.0.3
     optionalDependencies:
-      sodium-native: 4.2.1
+      sodium-native: 4.3.0
 
-  '@stellar/stellar-sdk@13.0.0-beta.1':
+  '@stellar/stellar-sdk@13.0.0-rc.1':
     dependencies:
-      '@stellar/stellar-base': 13.0.0-beta.1
+      '@stellar/stellar-base': 13.0.0
       axios: 1.7.7
       bignumber.js: 9.1.2
       eventsource: 2.0.2
@@ -322,7 +322,7 @@ snapshots:
       inherits: 2.0.4
       safe-buffer: 5.2.1
 
-  sodium-native@4.2.1:
+  sodium-native@4.3.0:
     dependencies:
       node-gyp-build: 4.8.2
     optional: true

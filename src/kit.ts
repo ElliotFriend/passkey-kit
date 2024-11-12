@@ -1,6 +1,6 @@
 import { Client as FactoryClient } from 'passkey-factory-sdk'
 import { Client as PasskeyClient, type Signature, type SignerKey as SDKSignerKey, type SignerLimits as SDKSignerLimits } from 'passkey-kit-sdk'
-import { StrKey, hash, xdr, SorobanRpc, Keypair, Address } from '@stellar/stellar-sdk/minimal'
+import { StrKey, hash, xdr, rpc, Keypair, Address } from '@stellar/stellar-sdk/minimal'
 import type { AuthenticatorAttestationResponseJSON, AuthenticatorSelectionCriteria } from "@simplewebauthn/types"
 import { startRegistration, startAuthentication } from "@simplewebauthn/browser"
 import { Buffer } from 'buffer'
@@ -12,7 +12,7 @@ import { AssembledTransaction, DEFAULT_TIMEOUT, type Tx, type Spec } from '@stel
 // TODO Return base64url encoded strings as well as buffers
 
 export class PasskeyKit extends PasskeyBase {
-    declare public rpc: SorobanRpc.Server
+    declare public rpc: rpc.Server
     declare public rpcUrl: string
     public keyId: string | undefined
     public networkPassphrase: string
@@ -475,7 +475,7 @@ export class PasskeyKit extends PasskeyBase {
         });
     }
 
-    /* LATER 
+    /* LATER
         - Add a getKeyInfo action to get info about a specific passkey
             Specifically looking for name, type, etc. data so a user could grok what signer mapped to what passkey
     */

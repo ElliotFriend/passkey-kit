@@ -1,4 +1,4 @@
-import { SorobanRpc } from "@stellar/stellar-sdk/minimal"
+import { rpc } from "@stellar/stellar-sdk/minimal"
 
 // TODO consider adding support for a signAuthEntry method that conforms to the ed25519 signature scheme of this passkey interface
 // once we do that we can clean the code a little with the `xdr.HashIdPreimage.envelopeTypeSorobanAuthorization` stuff
@@ -7,12 +7,12 @@ import { SorobanRpc } from "@stellar/stellar-sdk/minimal"
 
 export class PasskeyBase {
     public rpcUrl: string | undefined
-    public rpc: SorobanRpc.Server | undefined
-    
+    public rpc: rpc.Server | undefined
+
     constructor(rpcUrl?: string) {
         if (rpcUrl) {
             this.rpcUrl = rpcUrl
-            this.rpc = new SorobanRpc.Server(rpcUrl)
+            this.rpc = new rpc.Server(rpcUrl)
         }
     }
 }
